@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ikleshcloudnativewithazure 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ikleshcloudnativewithazure
+  template:
+    metadata:
+      labels:
+        app: ikleshcloudnativewithazure 
+    spec:
+      containers:
+        - name: ikleshcloudnativewithazure 
+          image: cloudnativecheckpoint.azurecr.io/ikleshcloudnativewithazure
+          ports:
+          - containerPort: 80
